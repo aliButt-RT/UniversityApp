@@ -3730,11 +3730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ali.iftikhar\\Desktop\\.NET learning\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
+      "projectUniqueName": "C:\\Users\\ali.iftikhar\\Desktop\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
       "projectName": "UniversityApp",
-      "projectPath": "C:\\Users\\ali.iftikhar\\Desktop\\.NET learning\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
+      "projectPath": "C:\\Users\\ali.iftikhar\\Desktop\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
       "packagesPath": "C:\\Users\\ali.iftikhar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ali.iftikhar\\Desktop\\.NET learning\\UniversityApp\\UniversityApp\\obj\\",
+      "outputPath": "C:\\Users\\ali.iftikhar\\Desktop\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

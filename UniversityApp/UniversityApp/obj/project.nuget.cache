@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V8vboi7u0mpOYdtERy8z1SCPy1ybYQP5FvkuOGrTXHvrd4KyBWXR92ZMiDrrkMOrLk3hfUaohhIVYH5nbdBE0Q==",
+  "dgSpecHash": "ZiynB6IBBV32HHw0ZKFL4xc+oBATJATfmuZFYBrTfS2zfYWMum68/mYHlXz9W9knLWZP72qijaKLCjEGnKgGSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ali.iftikhar\\Desktop\\.NET learning\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
+  "projectFilePath": "C:\\Users\\ali.iftikhar\\Desktop\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp\\UniversityApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ali.iftikhar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ali.iftikhar\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
