@@ -33,5 +33,6 @@ namespace UniversityApp.Services
             var employeeListVm = _mapper.Map<List<EmployeeViewModel>>(employeeResult);
             return OperationResult.Success("Record fetched successfully.", employeeListVm);
         }
+        //end of class
     }
 }
