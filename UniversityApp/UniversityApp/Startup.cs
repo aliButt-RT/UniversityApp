@@ -45,6 +45,10 @@ namespace UniversityApp
 
             services.AddCors();
             services.AddScoped<IDepartmentServices, DepartmentServices>();
+            services.AddScoped<IEmployeeServices, EmployeeServices>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
         }
     } 
 }

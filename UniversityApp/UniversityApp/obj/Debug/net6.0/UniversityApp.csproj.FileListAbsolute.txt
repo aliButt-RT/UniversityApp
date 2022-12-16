@@ -162,3 +162,5 @@ C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\Universi
 C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\UniversityApp\obj\Debug\net6.0\UniversityApp.pdb
 C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\UniversityApp\obj\Debug\net6.0\UniversityApp.genruntimeconfig.cache
 C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\UniversityApp\obj\Debug\net6.0\ref\UniversityApp.dll
+C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\UniversityApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\ali.iftikhar\Desktop\UniversityApp\UniversityApp\UniversityApp\UniversityApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
