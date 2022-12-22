@@ -7,6 +7,8 @@ namespace UniversityApp.Abstractions
         Task<OperationResult> GetDepartmentsCount(string departmentName);
         Task<OperationResult> AllVCsList();
         Task<OperationResult> AllVCsList(string departmentName);
-      
+        Task<bool> IsDepartmentExist(string departmentName);
+
+
     }
 }

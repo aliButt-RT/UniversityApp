@@ -30,7 +30,7 @@ namespace UniversityApp.Services
             return new OperationResult(true, "All VC department list.", listOfVCs);
         }
 
-        private async Task<bool> IsDepartmentExist(string departmentName)
+        public async Task<bool> IsDepartmentExist(string departmentName)
         {
             if (await _uniDbContext.Departments.Where(d => d.DName == departmentName).ToListAsync() != null)
                 return true;

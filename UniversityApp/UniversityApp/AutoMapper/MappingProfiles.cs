@@ -11,7 +11,9 @@ namespace UniversityApp.AutoMapper
             CreateMap<Employee, EmployeeViewModel>()
                 .ForMember(
                     a => a.EName,
-                    opt => opt.MapFrom(b => b.EName.ToLower()));             
+                    opt => opt.MapFrom(b => b.EName.ToLower()));
+
+            CreateMap<EmployeeViewModel, Employee>();
         }
     }
 }

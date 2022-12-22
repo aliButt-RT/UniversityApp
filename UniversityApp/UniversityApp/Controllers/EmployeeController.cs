@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using UniversityApp.Abstractions;
+using UniversityApp.ViewModels;
 
 namespace UniversityApp.Controllers
 {
@@ -15,17 +16,28 @@ namespace UniversityApp.Controllers
         }
 
         [HttpGet("GetEmployeeDetail")]
-        public IActionResult GetEmployeeDetail(string employeeId)
+        public async Task<IActionResult> GetEmployeeDetail(string employeeId)
         {
-            var result = _employeeServices.GetEmployeeDetail(employeeId).GetAwaiter().GetResult();
+            var result = await _employeeServices.GetEmployeeDetail(employeeId);
             return Ok(result.Payload);
         }
 
         [HttpGet("GetAllEmployeeDetail")]
-        public IActionResult GetEmployeeDetail()
+        public async Task<IActionResult> GetEmployeeDetail()
         {
-            var result = _employeeServices.GetEmployeeDetail().GetAwaiter().GetResult();
+            var result = await _employeeServices.GetEmployeeDetail();
             return Ok(result.Payload);
+        }
+
+        [HttpPost("Creat")]
+        public async Task<IActionResult> Creat(string departmentName,EmployeeViewModel employeeVm)
+        {
+            var result = await _employeeServices.CreateEmployee(departmentName, employeeVm);
+            if (result.Succeeded)
+            {
+                return Ok(result.Payload);
+            }
+            return BadRequest(result.Message);
         }
 
     }

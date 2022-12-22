@@ -11,11 +11,13 @@ namespace UniversityApp.Services
     {
         private readonly UniDbContext _uniDbContext;
         private readonly IMapper _mapper;
+        private readonly IDepartmentServices _departmentServices;
 
-        public EmployeeServices(UniDbContext uniDbContext, IMapper mapper)
+        public EmployeeServices(UniDbContext uniDbContext, IMapper mapper, IDepartmentServices departmentServices)
         {
             _uniDbContext = uniDbContext;
             _mapper = mapper;
+            _departmentServices = departmentServices;
         }
         public async Task<OperationResult> GetEmployeeDetail(string employeeId)
         {
@@ -32,6 +34,29 @@ namespace UniversityApp.Services
             var employeeResult = await _uniDbContext.Employees.ToListAsync();
             var employeeListVm = _mapper.Map<List<EmployeeViewModel>>(employeeResult);
             return OperationResult.Success("Record fetched successfully.", employeeListVm);
+        }
+
+        public async Task<OperationResult> CreateEmployee(string departmentName, EmployeeViewModel employeeVm)
+        {
+            if (!_departmentServices.IsDepartmentExist(departmentName).GetAwaiter().GetResult())
+            {
+                return OperationResult.Failure("No such department Exist.");
+            }
+
+            var employeeEnitity = _mapper.Map<Employee>(employeeVm);
+            employeeEnitity.Department = departmentName;
+
+            try
+            {
+                var employeeCreated = await _uniDbContext.Employees.AddAsync(employeeEnitity);
+                await _uniDbContext.SaveChangesAsync();
+                return OperationResult.Success("Employee record Inserted Succesfully.",employeeCreated);
+            }
+            catch(Exception ex)
+            {
+                return OperationResult.Failure(ex.Message);
+            }
+
         }
         //end of class
     }
